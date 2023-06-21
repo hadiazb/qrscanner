@@ -1,0 +1,49 @@
+swiper-container {
+  height: 100%;
+  width: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  height: 100%;
+}
+
+.grid-row {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-row-col {
+  border: 2px solid #1ed809;
+  height: 300px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-animation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: 1px solid #e3ef35;
+  animation: line_scan 4s ease-in-out infinite;
+}
+
+@keyframes line_scan {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+}

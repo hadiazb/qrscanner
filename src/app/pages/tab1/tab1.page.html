@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-grid [style]="!showContent ? 'display: none' : 'display: block'" class="ion-padding grid">
+    <ion-row class="ion-padding grid-row">
+      <ion-col class="grid-row-col">
+        <div class="line-animation"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <swiper-container [style]="showContent ? 'display: none' : 'display: block'" [slidesPerView]="1" [loop]="false"
+    [allowSlidePrev]="false" [allowSlideNext]="false">
+    <swiper-slide *ngFor="let btn of [1]">
+      <ion-button (click)="startScan()" expand="block" fill="outline" shape="round" size="large">
+        ScanCode
+      </ion-button>
+    </swiper-slide>
+  </swiper-container>
+  <ion-label *ngIf="scannerResult">{{scannerResult}}</ion-label>
+</ion-content>
